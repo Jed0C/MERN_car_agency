@@ -1,11 +1,14 @@
 import { createAsyncThunk,createSlice } from '@reduxjs/toolkit'
 import axios from "axios";
 
+// for vercel
+const API_URL = process.env.REACT_APP_API_URL
+
 
 //getcommande
 export const getcommande = createAsyncThunk("commande/get", async () => {
   try {
-    let result = await axios.get("http://localhost:5000/commande/");
+    let result = await axios.get(`${API_URL}/commande`);
     return await result.data
   } catch (error) {
     console.log(error)
@@ -14,7 +17,7 @@ export const getcommande = createAsyncThunk("commande/get", async () => {
 //add commande
 export const addcommande = createAsyncThunk("commande/add", async (commande) => {
   try {
-    let result = await axios.post("http://127.0.0.1:5000/commande/add", commande);
+    let result = await axios.post(`${API_URL}/commande/add`, commande);
     return await result.data
   } catch (error) {
     console.log(error)
@@ -24,7 +27,7 @@ export const addcommande = createAsyncThunk("commande/add", async (commande) => 
 //delete
 export const deletecommande = createAsyncThunk("commande/delete", async (id) => {
   try {
-    let result = await axios.delete(`http://127.0.0.1:5000/commande/${id}` );
+    let result = await axios.delete(`${API_URL}/commande/${id}` );
     return await result.data
   } catch (error) {
     console.log(error)
@@ -34,7 +37,7 @@ export const deletecommande = createAsyncThunk("commande/delete", async (id) => 
 
 export const editcommande= createAsyncThunk("commande/edit", async ({id, edited})=>{
   try {
-    let result= await axios.put(`http://localhost:5000/commande/${id}`, edited);
+    let result= await axios.put(`${API_URL}/commande/${id}`, edited);
     return result.data
   } catch (error) {
     console.log(error)
@@ -46,7 +49,7 @@ export const editcommande= createAsyncThunk("commande/edit", async ({id, edited}
 
 export const getcommandeByUserId = createAsyncThunk("commande/getByUserId",async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/commande/user/${userId}`);
+      const response = await axios.get(`${API_URL}/commande/user/${userId}`);
       return response.data.commandes;
     } catch (error) {
       console.error("Failed to fetch commandes:", error);

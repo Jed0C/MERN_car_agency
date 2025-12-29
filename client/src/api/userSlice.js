@@ -1,10 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// for vercel
+const API_URL = process.env.REACT_APP_API_URL
+
 export const userRegister = createAsyncThunk("user/register", async (user) => {
   try {
     let response = await axios.post(
-      "http://localhost:5000/user/register",
+      `${API_URL}/user/register`,
       user
     );
     return response;
@@ -14,7 +17,7 @@ export const userRegister = createAsyncThunk("user/register", async (user) => {
 });
 export const userlogin = createAsyncThunk("user/login", async (user,thunkAPI) => {
   try {
-    let response = await axios.post("http://localhost:5000/user/login", user);
+    let response = await axios.post(`${API_URL}/user/login`, user);
     return await response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response?.message || "Login failed");
@@ -25,7 +28,7 @@ export const userlogin = createAsyncThunk("user/login", async (user,thunkAPI) =>
 
 export const userCurrent = createAsyncThunk("user/current", async () => {
   try {
-    let response = await axios.get("http://localhost:5000/user/current", {
+    let response = await axios.get(`${API_URL}/user/current`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -39,7 +42,7 @@ export const userCurrent = createAsyncThunk("user/current", async () => {
 //get all users
 export const getusers = createAsyncThunk("car/get", async () => {
   try {
-    let result = await axios.get("http://localhost:5000/user/");
+    let result = await axios.get(`${API_URL}/user`);
     return result.data
   } catch (error) {
     console.log(error)
@@ -49,13 +52,15 @@ export const getusers = createAsyncThunk("car/get", async () => {
 
 export const edituser= createAsyncThunk("user/edit", async ({id, edited})=>{
   try {
-    let result=await  axios.put(`http://localhost:5000/user/${id}`, edited);
+    let result=await  axios.put(`${API_URL}/user/${id}`, edited);
     return result
   } catch (error) {
     console.log(error)
   }
 })
 
+
+///////////////////////////////////////////////////////////////
 const initialState = {
   user: null,
   userList: [],
