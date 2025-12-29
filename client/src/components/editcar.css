@@ -1,0 +1,23 @@
+
+.edit_btn{
+      height: 40px !important;
+      width: 50px !important;
+      border-radius: 0px 50px 50px 0px !important;
+      background-color: rgb(253, 253, 253) !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.edit_btn:hover{
+    background-color: rgb(41, 39, 39) !important;
+    
+}
+
+  .modal-css{
+        display: flex;
+        opacity: 1;
+        z-index: 9999;
+        font-size: 18px !important;
+        font-family: 'Manrope',sans-serif;
+    }

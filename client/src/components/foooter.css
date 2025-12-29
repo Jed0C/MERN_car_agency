@@ -1,0 +1,77 @@
+.foooter{
+    min-width:60px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Manrope',sans-serif;
+    font-weight:400;
+}
+
+.foooter-h{
+    min-width:60px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Manrope',sans-serif;
+    font-weight:600;
+}
+.foooter-t{
+    min-width:60px;
+    letter-spacing: 1px;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-family: 'Manrope',sans-serif;
+    font-weight:600;
+    margin: 50px 0;
+}
+
+.foooter li{
+    padding:8px 0;
+}
+
+.img-overlay {
+  position: relative;
+}
+
+.img-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-overlay:hover::after {
+  opacity: 1;
+  border-radius: 1.5rem;
+}
+
+a:hover{
+    color: rgb(199, 197, 201);
+}
+a:visited{
+    color: rgb(199, 197, 201);
+}
+
+ .foooter-hover {
+  position: relative; 
+}
+.foooter-hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.5s ease;
+}
+
+.foooter-hover:hover::before,
+.foooter-hover.active::before {
+  transform: scaleX(1);
+  transform-origin: left center;
+}

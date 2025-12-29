@@ -1,0 +1,61 @@
+.contact-t{
+    /* background-color:rgb(195, 196, 197) ; */
+    background: linear-gradient(136deg, rgba(190, 182, 182, 0.945), #dad7d7);
+
+    
+    font-family: 'Manrope',sans-serif;
+    text-align: center;
+    padding:120px 0 120px;
+}
+
+.contact-t h1{
+    line-height:46px;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Manrope',sans-serif;
+    color: rgb(28, 28, 28);
+}
+
+.contact-g{
+   /* background: linear-gradient(120deg, rgb(252, 239, 239), #d6d1db); */
+   background-color:  rgb(255, 255, 255);
+   padding: 60px 80px;
+}
+/* right */
+
+.contact-g h1{
+    line-height:46px;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: 'Manrope',sans-serif;
+    color: rgb(28, 28, 28);    
+}
+
+.contact-p {
+    line-height:28px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Manrope',sans-serif;
+    color: rgb(114, 117, 120);  
+    margin: 20px 0;  
+}
+/* left */
+.contact-gleft{
+    padding-top: 30px;
+}
+.no-border{
+    border:none;
+    outline: none;
+    
+    position: relative;
+    padding: 5px 5px;
+    
+}
+.no-border input ,.no-border textarea{
+    line-height:28px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Manrope',sans-serif;
+    background: rgb(248, 248, 248);
+    outline: none;
+}

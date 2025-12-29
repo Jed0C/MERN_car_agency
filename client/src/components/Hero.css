@@ -1,0 +1,76 @@
+header {
+  position: relative;
+  background-color: black;
+  height: 95vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  top: -95px;
+  
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  left: 0;
+  max-height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#pretitle{
+    position: absolute;
+    bottom:27%;
+    left:10%;
+    border-radius: 30px;
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+#pretitle p{
+    font-size: 1.5rem;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    color:white;
+    
+}
+#pretitle h1{
+    font-size: 3.5rem;
+    margin: 0 0 1rem 0;
+    max-width: 600px;
+    color:white;
+}
+#pretitle button{
+    border-radius: 9px;
+    border: white;
+    height: 60px;
+    width: 134px;
+    margin-top: 40px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+#pretitle button a{
+  text-decoration: none;
+  color: black;}

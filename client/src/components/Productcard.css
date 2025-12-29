@@ -1,0 +1,58 @@
+.carta{
+    width: 300px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.897) !important;
+    padding:20px 10px 10px;
+    margin: 20px auto;
+    border-radius:20px !important;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Manrope',sans-serif;
+    text-decoration: none !important;
+    
+}
+.carta p{
+    font-size: 18px;
+}
+.carta h1{
+    font-size: 23px;
+}
+/* .carta button{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.911);
+    border: none;
+    border-radius: 4px;
+    width: 141.12px;
+    height: 50px;
+    padding: 5px 10px;
+    text-align: center;
+} */
+.carta button:hover{
+    background-color: rgb(70, 69, 69);
+}
+.carta:hover {
+    box-shadow: 0 12px 16px 0 rgba(055, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+
+    .delete_btn{
+      height: 50px !important;
+      width: 50px !important;
+      border-radius: 50px 0px 0px 50px !important;
+      background-color: rgb(241, 236, 236);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff !important;
+    }
+
+    .pair_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    }
+

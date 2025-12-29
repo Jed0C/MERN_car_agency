@@ -1,0 +1,70 @@
+.carlist_section{
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-family: 'Manrope',sans-serif;
+    
+}
+.btn_groupe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(to bottom,  rgba(148, 147, 147, 0.438) 0%, rgba(224, 223, 223, 0.87) 100%);
+}
+.btn_groupe button{
+    margin: 0 10px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 7px;
+    background : transparent;
+    padding: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c0c0c1;
+}
+
+.btn_groupe button:hover{
+    border: 0.1px solid rgba(73, 73, 73, 0.562);
+    cursor: pointer;
+}
+
+
+.carlist_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(148, 147, 147, 0.438) 100%);
+    
+}
+.carlist_title h1{
+    font-size: 4rem;
+    max-width: 700px;
+    margin:10px auto 20px;
+    color:rgb(255, 255, 255);
+    
+}
+.carlist_title p{
+    font-size: 2.5rem;
+    max-width: 900px;
+    padding-bottom: 30px;
+    margin:0 auto 10px;
+    color:#c0c0c1;
+}
+ .cargrid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 15px 10% 0;
+    min-height: 400px;
+    background: linear-gradient(to bottom,   rgba(224, 223, 223, 0.87) 0%, rgb(255, 255, 255) 100%);
+    
+ }
