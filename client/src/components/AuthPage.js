@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Login from "./Loginn";
-import Register from "./Registerr";
+
 import './authpage.css';
 import Loginn from "./Loginn";
 import Registerr from "./Registerr";

@@ -1,12 +1,11 @@
 import { createAsyncThunk,createSlice } from '@reduxjs/toolkit'
 import axios from "axios";
 
-// for vercel
-const API_URL = process.env.REACT_APP_API_URL;
+
 
 export const getcar = createAsyncThunk("car/get", async () => {
   try {
-    let result = await axios.get(`${API_URL}/car`);
+    let result = await axios.get(`http://localhost:5000/car`);
     return result.data
   } catch (error) {
     console.log(error)
@@ -15,7 +14,7 @@ export const getcar = createAsyncThunk("car/get", async () => {
 //add car
 export const addcar = createAsyncThunk("car/add", async (newcar) => {
   try {
-    let result = await  axios.post(`${API_URL}/car/add`, newcar);
+    let result = await  axios.post(`http://localhost:5000/car/add`, newcar);
     return result
   } catch (error) {
     console.log(error)
@@ -25,7 +24,7 @@ export const addcar = createAsyncThunk("car/add", async (newcar) => {
 //delete
 export const deletecar = createAsyncThunk("car/delete", async (id) => {
   try {
-    let result = await  axios.delete(`${API_URL}/car/${id}` );
+    let result = await  axios.delete(`http://localhost:5000/car/${id}` );
     return result
   } catch (error) {
     console.log(error)
@@ -35,7 +34,7 @@ export const deletecar = createAsyncThunk("car/delete", async (id) => {
 
 export const editcar= createAsyncThunk("car/edit", async ({id, edited})=>{
   try {
-    let result=await  axios.put(`${API_URL}/car/${id}`, edited);
+    let result=await  axios.put(`http://localhost:5000/car/${id}`, edited);
     return result
   } catch (error) {
     console.log(error)
