@@ -102,8 +102,6 @@ SecretOrKey=your_secret_key
 
 ### 🚀 Future Enhancements
 + Payment integration
-+ Booking system
-+ Role-based access control
 + Advanced filtering & sorting
 + Admin analytics dashboard
 
